@@ -76,14 +76,15 @@ while True:
 
         for i in range(4):
             figure[i].y += 1
-
+            
             if not check_boarders():
-                for i in range(4):
-                    field[figure_old[i].y][figure_old[i].x] = color
-                    color = get_color()
-                figure = deepcopy(choice(figures))
-                anim_limit = 2000
-                break
+              for i in range(4):
+                  field[figure_old[i].y][figure_old[i].x] = color
+              figure = deepcopy(choice(figures))
+              color = get_color()
+              anim_limit = 2000
+              break
+
 
     center = figure[0]
     figure_old = deepcopy(figure)
